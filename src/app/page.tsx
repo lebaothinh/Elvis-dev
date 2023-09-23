@@ -1,113 +1,241 @@
-import Image from 'next/image'
+import {
+  CodeBracketIcon,
+  ComputerDesktopIcon,
+  HandRaisedIcon,
+} from "@heroicons/react/24/solid";
+import Link from "next/link";
+import { useEffect } from "react";
+import { Company } from "./component/Company";
+import { CompanyTitle } from "./component/CompanyTitle";
+import { COMPANIES, getYearsOfWorkingBySkill } from "./constant/common";
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div
+        className="pt-[30px] lg:pt-[45px] flex flex-col justify-between h-[calc(100vh_-_115px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-[url(/me.webp)] bg-no-repeat bg-[center_bottom] bg-contain"
+      >
+        <div className="flex justify-between gap-[15px] lg:items-center flex-col lg:flex-row">
+          <h1 className="lg:text-6xl text-5xl leading-[1.1] font-bold text-yankees-blue">
+            Hey There,
+            <br /> I&apos;m Elvis
+          </h1>
+          <h2 className="text-base">
+            Making the web look good and work even better, <br />
+            And i love what i do.
+          </h2>
+        </div>
+        <a href="mailto:lebaothinh.krb@gmail.com" className="inline w-fit">
+          <h2 className="hidden lg:inline font-bold text-base text-chinese-orange">
+            lebaothinh.krb@gmail.com
+          </h2>
+        </a>
+        <div className="flex justify-between items-center h-[60px] lg:h-[100px] xl:h-[255px] text-yankees-blue bg-white lg:bg-transparent rounded-full px-[20px] mb-[10px] lg:mb-[unset]">
+          <div className="flex items-center gap-[10px]">
+            <h3 className="text-[30px] lg:text-[50px] leading-[1] font-bold">
+              05
+            </h3>
+            <h3 className="uppercase text-[11px] lg:text-[17px] leading-[1.2]">
+              year
+              <br />
+              experience
+            </h3>
+          </div>
+          <h2 className="flex items-center gap-[10px] lg:gap-[20px]">
+            <span className="hidden lg:inline-flex"> Find me on</span>
+            <a
+              target="_blank"
+              title="See my profile"
+              className="jello-horizontal"
+              href="https://www.linkedin.com/in/bao-thinh-le/"
+            >
+              <svg
+                className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] xl:w-[48px] xl:h-[48px]"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#0288D1"
+                  d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"
+                ></path>
+                <path
+                  fill="#FFF"
+                  d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              target="_blank"
+              title="Call me on Skype"
+              href="skype:live:38df09da38c09772?userinfo"
+              className="jello-horizontal"
+            >
+              <svg
+                className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] xl:w-[48px] xl:h-[48px]"
+                xmlns="http://www.w3.org/2000/svg"
+                x="0px"
+                y="0px"
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#03a9f4"
+                  d="M24 4A20 20 0 1 0 24 44A20 20 0 1 0 24 4Z"
+                ></path>
+                <path
+                  fill="#03a9f4"
+                  d="M33.5 22A11.5 11.5 0 1 0 33.5 45 11.5 11.5 0 1 0 33.5 22zM14.5 3A11.5 11.5 0 1 0 14.5 26 11.5 11.5 0 1 0 14.5 3z"
+                ></path>
+                <path
+                  fill="#fff"
+                  d="M24.602,36C18,36,15,32.699,15,30.199C15,28.898,15.898,28,17.199,28c2.801,0,2.102,4.102,7.402,4.102c2.699,0,4.199-1.5,4.199-3c0-0.902-0.402-1.902-2.199-2.402l-5.902-1.5C16,24,15.102,21.398,15.102,18.898c0-5.098,4.699-6.898,9.098-6.898C28.301,12,33,14.199,33,17.199c0,1.301-1,2.102-2.301,2.102c-2.398,0-2-3.402-6.801-3.402c-2.398,0-3.797,1.102-3.797,2.703c0,1.598,1.898,2.098,3.598,2.5l4.402,1C32.898,23.199,34,26,34,28.699C33.898,32.898,30.898,36,24.602,36z"
+                ></path>
+              </svg>
+            </a>
+          </h2>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div
+        id="work-section"
+        className="lg:snap-start bg-white px-[20px] lg:px-[50px] lg:h-screen xl:p-[100px] flex flex-col lg:flex-row lg:gap-[50px] xl:gap-[60px] items-center"
+      >
+        <div className="snap-start lg:snap-align-none lg:flex-[1] flex flex-col gap-[30px] lg:gap-[20px] xl:gap-[13px] flex-[100vh] justify-center ">
+          <div className="w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
+            <div className="bg-myrtle-green xl:w-[70px] xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full shrink-0">
+              <CodeBracketIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
+            </div>
+            <div className="flex flex-col justify-center gap-[8px]">
+              <p className="lg:text-[23px] xl:text-[25px] text-[20px] leading-[1.1] font-bold">
+                Main frameworks
+              </p>
+              <p className="xl:text-base lg:text-[15px] text-[14px] leading-[0.9] text-yankees-blue/80">
+                ReactJs, NextJs:{" "}
+                {getYearsOfWorkingBySkill("ReactJs", "NextJs").toFixed(1)} years
+              </p>
+              <p className="xl:text-base lg:text-[15px] text-[14px] leading-[0.9] text-yankees-blue/80">
+                VueJs, NuxtJs:{" "}
+                {getYearsOfWorkingBySkill("VueJs", "NuxtJs").toFixed(1)} years
+              </p>
+              <p className="xl:text-base lg:text-[15px] text-[14px] leading-[0.9] text-yankees-blue/80">
+                Angular 4+:{" "}
+                {getYearsOfWorkingBySkill("Angular4", "Angular8").toFixed(1)}{" "}
+                years
+              </p>
+            </div>
+          </div>
+          <div className="w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
+            <div className="bg-maize xl:w-[70px] xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full shrink-0">
+              <ComputerDesktopIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
+            </div>
+            <div className="flex flex-col justify-center gap-[8px]">
+              <p className="lg:text-[23px] xl:text-[25px] text-[20px] font-bold">
+                Web Development
+              </p>
+              <p className="xl:text-base lg:text-[15px] text-[14px] text-yankees-blue/80">
+                76 Projects
+              </p>
+            </div>
+          </div>
+          <div className="w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
+            <div className="bg-chinese-orange xl:w-[70px] shrink-0 xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full">
+              <HandRaisedIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
+            </div>
+            <div className="flex flex-col justify-center gap-[8px]">
+              <p className="text-[20px] lg:text-[23px] xl:text-[25px] font-bold">
+                Skills
+              </p>
+              <p className="text-[14px] xl:text-base lg:text-[15px]  text-yankees-blue/80">
+                HTML, CSS, Javascript, Typescript, SCSS, Responsive Web, Web
+                Performance, Accessibility, SEO, Google Analytics, Webpack,
+                I18n, Git, Design, Docker, Google Could, AWS, Writing unit test,
+                Drawing chart SVG, D3js...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="snap-start lg:snap-align-none lg:flex-[1] flex flex-col gap-[30px] py-[20px] xl:gap-[50px] lg:h-screen flex-[100vh] justify-center">
+          <h1 className="text-[30px] text-center lg:text-left lg:text-[45px] xl:text-[50px] leading-[1] text-yankees-blue font-bold">
+            What do i help?
+          </h1>
+          <p className="leading-[32px] text-base">
+            I specialize in React, VueJS, Angular, and I&apos;m also fascinated about
+            creating design and make it real through clean, maintainable, and
+            performant code.
+          </p>
+          <p className="leading-[32px] text-base">
+            I can work independently, I’m self learner, patient and thoughtful.
+            I alway find a way to make products better and better user
+            experience.
+          </p>
+          <div className="flex flex-wrap gap-[10px] lg:gap-[30px] text-center">
+            <div className="flex-[calc(50%_-_5px)] lg:flex-[calc(50%_-_15px)] xl:flex-[unset]">
+              <h1 className="text-[40px] leading-[1.2] text-yankees-blue font-bold">
+                ⚽
+              </h1>
+              <p>Football (Soccer)</p>
+            </div>
+            <div className="flex-[calc(50%_-_5px)]  lg:flex-[calc(50%_-_15px)] xl:flex-[unset]">
+              <h1 className="text-[40px] leading-[1.2] text-yankees-blue font-bold">
+                🎸
+              </h1>
+              <p>Playing Guitar</p>
+            </div>
+            <div className="flex-[calc(50%_-_5px)]  lg:flex-[calc(50%_-_15px)] xl:flex-[unset]">
+              <h1 className="text-[40px] leading-[1.2] text-yankees-blue font-bold">
+                🏸
+              </h1>
+              <p>Badminton</p>
+            </div>
+            <div className="flex-[calc(50%_-_5px)]  lg:flex-[calc(50%_-_15px)] xl:flex-[unset]">
+              <h1 className="text-[40px] leading-[1.2] text-yankees-blue font-bold">
+                🌊
+              </h1>
+              <p>Swimming</p>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <div
+        id="experience-section"
+        className="bg-[#F8F7F1] p-[30px_20px] lg:p-[50px] xl:p-[77px] snap-start"
+      >
+        <h2 className="text-[30px] lg:mb-[40px] lg:text-[45px] leading-[1] mb-[30px] xl:mb-[50px] font-bold text-yankees-blue text-center">
+          My Work Experience
+        </h2>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+        {COMPANIES.reverse().map((company, index) => {
+          return (
+            <>
+              <CompanyTitle
+                name={company.name}
+                imageUrl={company.imageUrl}
+                imageAlt={company.imageAlt}
+                color={company.color}
+                url={company.url}
+                present={index === 0}
+              />
+              <div className="flex flex-wrap gap-[15px] lg:gap-[20px] xl:gap-[40px] mb-[40px]">
+                {company.projects.reverse().map((project) => (
+                  <Company key={project.id} data={project} />
+                ))}
+              </div>
+            </>
+          );
+        })}
       </div>
-    </main>
-  )
+
+      <div className="pb-[20px]">
+        <Link className="mx-auto text-base py-2 px-4 block w-fit rounded-full border-2 text-maize border-maize" href="/posts">View my posts</Link>
+      </div>
+    </>
+  );
 }
