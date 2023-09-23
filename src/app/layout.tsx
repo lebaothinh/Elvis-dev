@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { PhoneIcon } from "@heroicons/react/24/solid";
 import { HeaderMBButtonMenu } from "./component/HeaderMBButtonMenu";
 import { HeaderMenu } from "./component/HeaderMenu";
+import { NativeLink } from "./component/NativeLink";
 
 export const metadata: Metadata = {
   title: "Evis dev",
@@ -25,11 +26,11 @@ export default function RootLayout({
       <body className="bg-meat-brown">
         <header className="container mx-auto bg-cultured snap-start z-50 w-screen">
           <nav className="flex flex-wrap justify-between items-center mx-[20px] lg:mx-[50px] xl:mx-[77px] h-[60px] lg:h-[123px] border-b border-[#EFEDEB]">
-            <a href="/" className="flex items-center">
+            <NativeLink href="/" className="flex items-center">
               <span className="self-center text-xl font-semibold whitespace-nowrap">
                 Elvis Dev
               </span>
-            </a>
+            </NativeLink>
             <HeaderMBButtonMenu />
             <input className="hidden peer" type="checkbox" id="side-menu" />
             <div className="peer-checked:flex fixed z-50 lg:static inset-0 w-screen top-[60px] h-[calc(100vh_-_60px)] lg:top-[123px] bg-cultured lg:h-[unset] hidden justify-between items-center lg:flex lg:w-auto">
