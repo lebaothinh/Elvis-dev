@@ -15,6 +15,7 @@ export const HeaderMenu = () => {
     >
       <li className="w-full text-center">
         <Link
+          scroll={false}
           href="/"
           className="w-[150px] my-2 mx-auto h-[27px] lg:w-[118px] rounded-full hover:border-[1px] transition-all before:block before:bottom-[-2px] before:w-[80%] before:h-[2px]  before:absolute before:left-[50%] before:translate-x-[-50%] before:bg-cultured  after:block after:top-[-2px] after:w-[80%] after:h-[2px] relative after:absolute after:left-[50%] after:translate-x-[-50%] after:bg-cultured  hover:text-myrtle-green hover:border-myrtle-green flex justify-center items-center"
         >
@@ -23,6 +24,7 @@ export const HeaderMenu = () => {
       </li>
       <li className="w-full text-center">
         <Link
+          scroll={false}
           href="/#work-section"
           className="w-[150px] my-2 mx-auto h-[27px] lg:w-[118px] rounded-full hover:border-[1px] transition-all before:block before:bottom-[-2px] before:w-[80%] before:h-[2px]  before:absolute before:left-[50%] before:translate-x-[-50%] before:bg-cultured  after:block after:top-[-2px] after:w-[80%] after:h-[2px] relative after:absolute after:left-[50%] after:translate-x-[-50%] after:bg-cultured  hover:text-myrtle-green hover:border-myrtle-green flex justify-center items-center"
         >
@@ -31,6 +33,7 @@ export const HeaderMenu = () => {
       </li>
       <li className="w-full text-center">
         <Link
+          scroll={false}
           href="/#experience-section"
           className="w-[150px] my-2 mx-auto h-[27px] lg:w-[118px] rounded-full hover:border-[1px] transition-all before:block before:bottom-[-2px] before:w-[80%] before:h-[2px]  before:absolute before:left-[50%] before:translate-x-[-50%] before:bg-cultured  after:block after:top-[-2px] after:w-[80%] after:h-[2px] relative after:absolute after:left-[50%] after:translate-x-[-50%] after:bg-cultured  hover:text-myrtle-green hover:border-myrtle-green flex justify-center items-center"
         >

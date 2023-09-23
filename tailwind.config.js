@@ -18,7 +18,7 @@ module.exports = {
         "maize": "#EEC049",
       },
       backgroundImage: {
-        'me': "url('/me.webp')",
+        'me': `url('${process.env.NEXT_PUBLIC_ROOT_PATH ?? ''}/me.webp')`,
       }
     },
   },
