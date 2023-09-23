@@ -4,7 +4,6 @@ import {
   HandRaisedIcon,
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import { useEffect } from "react";
 import { Company } from "./component/Company";
 import { CompanyTitle } from "./component/CompanyTitle";
 import { COMPANIES, getYearsOfWorkingBySkill } from "./constant/common";
@@ -14,7 +13,7 @@ export default function Home() {
   return (
     <>
       <div
-        className="pt-[30px] lg:pt-[45px] flex flex-col justify-between h-[calc(100vh_-_115px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-[url(/me.webp)] bg-no-repeat bg-[center_bottom] bg-contain"
+        className="pt-[30px] lg:pt-[45px] flex flex-col justify-between h-[calc(100vh_-_115px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-me bg-no-repeat bg-[center_bottom] bg-contain"
       >
         <div className="flex justify-between gap-[15px] lg:items-center flex-col lg:flex-row">
           <h1 className="lg:text-6xl text-5xl leading-[1.1] font-bold text-yankees-blue">

@@ -17,6 +17,9 @@ module.exports = {
         "deep-space-sparkle": "#406765",
         "maize": "#EEC049",
       },
+      backgroundImage: {
+        'me': "url('/me.webp')",
+      }
     },
   },
   plugins: [],
