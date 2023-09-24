@@ -4,49 +4,61 @@ import {
   HandRaisedIcon,
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import Animation from "./component/Animation";
 import { Company } from "./component/Company";
 import { CompanyTitle } from "./component/CompanyTitle";
 import { COMPANIES, getYearsOfWorkingBySkill } from "./constant/common";
 
 export default function Home() {
-
   return (
     <>
-      <div
-        className="pt-[30px] lg:pt-[45px] flex flex-col justify-between h-[calc(100vh_-_115px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-me bg-no-repeat bg-[center_bottom] bg-contain"
-      >
-        <div className="flex justify-between gap-[15px] lg:items-center flex-col lg:flex-row">
-          <h1 className="lg:text-6xl text-5xl leading-[1.1] font-bold text-yankees-blue">
-            Hey There,
-            <br /> I&apos;m Elvis
-          </h1>
+      <div className="pt-[30px] lg:pt-[45px] flex flex-col justify-between h-[calc(100vh_-_115px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-me bg-no-repeat bg-[center_bottom] bg-contain">
+        <div className="flex justify-between gap-[15px] lg:items-center flex-col lg:flex-row lg:h-[120px]">
+          <h1
+            className="lg:text-6xl text-5xl leading-[1.1] font-bold text-yankees-blue"
+            id="intro-1"
+          ></h1>
           <h2 className="text-base">
-            Making the web look good and work even better, <br />
-            And i love what i do.
+            <span id="intro-4-1">
+              {/* Making the web look good and work even better */}
+            </span>
+            <br />
+            <span id="intro-4-2">{/* And i love what i do. */}</span>
           </h2>
         </div>
         <a href="mailto:lebaothinh.krb@gmail.com" className="inline w-fit">
-          <h2 className="hidden lg:inline font-bold text-base text-chinese-orange">
-            lebaothinh.krb@gmail.com
+          <h2
+            className="hidden lg:inline font-bold text-base text-chinese-orange"
+            id="intro-2"
+          >
+            {/* lebaothinh.krb@gmail.com */}
           </h2>
         </a>
         <div className="flex justify-between items-center h-[60px] lg:h-[100px] xl:h-[255px] text-yankees-blue bg-white lg:bg-transparent rounded-full px-[20px] mb-[10px] lg:mb-[unset]">
           <div className="flex items-center gap-[10px]">
-            <h3 className="text-[30px] lg:text-[50px] leading-[1] font-bold">
-              05
+            <h3
+              className="text-[30px] lg:text-[50px] leading-[1] font-bold "
+              id="intro-3-1"
+            >
+              {/* 05 */}
             </h3>
-            <h3 className="uppercase text-[11px] lg:text-[17px] leading-[1.2]">
-              year
+            <h3
+              className="uppercase text-[11px] lg:text-[17px] leading-[1.2]"
+              id="intro-3-2"
+            >
+              {/* year
               <br />
-              experience
+              experience */}
             </h3>
           </div>
           <h2 className="flex items-center gap-[10px] lg:gap-[20px]">
-            <span className="hidden lg:inline-flex"> Find me on</span>
+            <span className="hidden lg:inline-flex" id="intro-5">
+              {/* Find me on */}
+            </span>
             <a
               target="_blank"
               title="See my profile"
-              className="jello-horizontal"
+              className="jello-horizontal hidden-ani"
               href="https://www.linkedin.com/in/bao-thinh-le/"
             >
               <svg
@@ -72,7 +84,7 @@ export default function Home() {
               target="_blank"
               title="Call me on Skype"
               href="skype:live:38df09da38c09772?userinfo"
-              className="jello-horizontal"
+              className="jello-horizontal hidden-ani"
             >
               <svg
                 className="w-[35px] h-[35px] lg:w-[40px] lg:h-[40px] xl:w-[48px] xl:h-[48px]"
@@ -106,7 +118,7 @@ export default function Home() {
         className="lg:snap-start bg-white px-[20px] lg:px-[50px] lg:h-screen xl:p-[100px] flex flex-col lg:flex-row lg:gap-[50px] xl:gap-[60px] items-center"
       >
         <div className="snap-start lg:snap-align-none lg:flex-[1] flex flex-col gap-[30px] lg:gap-[20px] xl:gap-[13px] flex-[100vh] justify-center ">
-          <div className="w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
+          <div className="hidden-ani-from-left w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
             <div className="bg-myrtle-green xl:w-[70px] xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full shrink-0">
               <CodeBracketIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
             </div>
@@ -129,7 +141,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
+          <div className="hidden-ani-from-left w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
             <div className="bg-maize xl:w-[70px] xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full shrink-0">
               <ComputerDesktopIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
             </div>
@@ -142,7 +154,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
+          <div className="hidden-ani-from-left w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
             <div className="bg-chinese-orange xl:w-[70px] shrink-0 xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full">
               <HandRaisedIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
             </div>
@@ -161,20 +173,20 @@ export default function Home() {
         </div>
 
         <div className="snap-start lg:snap-align-none lg:flex-[1] flex flex-col gap-[30px] py-[20px] xl:gap-[50px] lg:h-screen flex-[100vh] justify-center">
-          <h1 className="text-[30px] text-center lg:text-left lg:text-[45px] xl:text-[50px] leading-[1] text-yankees-blue font-bold">
+          <h1 className="hidden-ani-from-right text-[30px] text-center lg:text-left lg:text-[45px] xl:text-[50px] leading-[1] text-yankees-blue font-bold">
             What do i help?
           </h1>
-          <p className="leading-[32px] text-base">
-            I specialize in React, VueJS, Angular, and I&apos;m also fascinated about
-            creating design and make it real through clean, maintainable, and
-            performant code.
+          <p className="hidden-ani-from-right leading-[32px] text-base">
+            I specialize in React, VueJS, Angular, and I&apos;m also fascinated
+            about creating design and make it real through clean, maintainable,
+            and performant code.
           </p>
-          <p className="leading-[32px] text-base">
+          <p className="hidden-ani-from-right leading-[32px] text-base">
             I can work independently, I’m self learner, patient and thoughtful.
             I alway find a way to make products better and better user
             experience.
           </p>
-          <div className="flex flex-wrap gap-[10px] lg:gap-[30px] text-center">
+          <div className="hidden-ani-from-right flex flex-wrap gap-[10px] lg:gap-[30px] text-center">
             <div className="flex-[calc(50%_-_5px)] lg:flex-[calc(50%_-_15px)] xl:flex-[unset]">
               <h1 className="text-[40px] leading-[1.2] text-yankees-blue font-bold">
                 ⚽
@@ -207,13 +219,13 @@ export default function Home() {
         id="experience-section"
         className="bg-[#F8F7F1] p-[30px_20px] lg:p-[50px] xl:p-[77px] snap-start"
       >
-        <h2 className="text-[30px] lg:mb-[40px] lg:text-[45px] leading-[1] mb-[30px] xl:mb-[50px] font-bold text-yankees-blue text-center">
+        <h2 className="text-[30px] lg:mb-[40px] lg:text-[45px] leading-[1] mb-[30px] xl:mb-[50px] font-bold text-yankees-blue text-center  hidden-ani-from-bot">
           My Work Experience
         </h2>
 
         {COMPANIES.reverse().map((company, index) => {
           return (
-            <>
+            <div className="hidden-ani-from-bot" key={index}>
               <CompanyTitle
                 name={company.name}
                 imageUrl={company.imageUrl}
@@ -227,14 +239,20 @@ export default function Home() {
                   <Company key={project.id} data={project} />
                 ))}
               </div>
-            </>
+            </div>
           );
         })}
       </div>
 
       <div className="pb-[20px]">
-        <Link className="mx-auto text-base py-2 px-4 block w-fit rounded-full border-2 text-maize border-maize" href="/posts">View my posts</Link>
+        <Link
+          className="mx-auto text-base py-2 px-4 block w-fit rounded-full border-2 text-maize border-maize"
+          href="/posts"
+        >
+          View my posts
+        </Link>
       </div>
+      <Animation />
     </>
   );
 }

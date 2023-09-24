@@ -84,6 +84,44 @@ body {
 }
 
 .jello-horizontal {
-  -webkit-animation: jello-horizontal 0.9s both;
-  animation: jello-horizontal 0.9s;
+  -webkit-animation: jello-horizontal 0.9s 5.1s;
+  animation: jello-horizontal 0.9s 5.1s;
+}
+
+@media screen and (min-width: 1024px) {
+  .jello-horizontal {
+    -webkit-animation: jello-horizontal 0.9s 5.9s;
+    animation: jello-horizontal 0.9s 5.9s;
+  }
+}
+
+.hidden-ani {
+  opacity: 0;
+  transition: all 1s ease;
+}
+.hidden-ani-from-left {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateX(-30%);
+}
+.hidden-ani-from-right {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateX(30%);
+}
+.hidden-ani-from-bot {
+  opacity: 0;
+  transition: all 1s ease;
+  transform: translateY(10%);
+}
+
+@media (prefers-reduced-motion) {
+  .hidden-ani {
+    transition: none;
+  }
+}
+
+.show-ani {
+  opacity: 1;
+  transform: translateX(0);
 }

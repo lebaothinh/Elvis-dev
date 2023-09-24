@@ -7,6 +7,7 @@ interface CompanyTitleProps {
   imageAlt: string;
   color: string;
   present?: boolean;
+  className?: string
 }
 
 export const CompanyTitle: FC<CompanyTitleProps> = ({
@@ -15,10 +16,11 @@ export const CompanyTitle: FC<CompanyTitleProps> = ({
   imageUrl,
   imageAlt,
   color,
-  present
+  present,
+  className
 }) => {
   return (
-    <a href={url} target="_blank">
+    <a href={url} target="_blank" className={className}>
       <div className="inline-flex gap-[10px] items-center mb-[20px]" title={present ? "I'm working here" : "I'm not working here anymore"}>
         <img
           style={{ borderColor: color }}
