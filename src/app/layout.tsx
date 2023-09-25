@@ -22,6 +22,10 @@ export default function RootLayout({
           href="https://fonts.cdnfonts.com/css/caros?styles=51460,51457,51446"
           rel="stylesheet"
         />
+        <link
+          rel="icon"
+          href="/logo.svg"
+        />
       </head>
       <body className="bg-meat-brown">
         <header className="container mx-auto bg-cultured snap-start z-50 w-screen">

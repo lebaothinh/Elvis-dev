@@ -58,6 +58,14 @@ export const Company: FC<CompanyProps> = ({ data }) => {
             <Skill key={skill} id={skill} />
           ))}</span>
         </p>
+        <p className="mb-2">
+          <span className="font-medium">Team size:</span>{" "}
+          <span>{data.team?.be && `${data.team?.be} back-ends`}</span>{" "}
+          <span>{data.team?.fe && `${data.team?.fe} front-ends`}</span>{" "}
+          <span>{data.team?.full && `${data.team?.full} fullstacks`}</span>{" "}
+          <span>{data.team?.sqa && `${data.team?.sqa} SQAs`}</span>{" "}
+          <span>{data.team?.comtor && `${data.team?.comtor} comtors`}</span>
+        </p>
         <p>
           <span className="font-medium">Time:</span>{" "}
           {data.from.toLocaleDateString()} - {data.to.toLocaleDateString()}

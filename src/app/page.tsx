@@ -2,6 +2,7 @@ import {
   CodeBracketIcon,
   ComputerDesktopIcon,
   HandRaisedIcon,
+  UserIcon,
 } from "@heroicons/react/24/solid";
 import Link from "next/link";
 import Animation from "./component/Animation";
@@ -141,21 +142,9 @@ export default function Home() {
               </p>
             </div>
           </div>
+
           <div className="hidden-ani-from-left w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
-            <div className="bg-maize xl:w-[70px] xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full shrink-0">
-              <ComputerDesktopIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
-            </div>
-            <div className="flex flex-col justify-center gap-[8px]">
-              <p className="lg:text-[23px] xl:text-[25px] text-[20px] font-bold">
-                Web Development
-              </p>
-              <p className="xl:text-base lg:text-[15px] text-[14px] text-yankees-blue/80">
-                76 Projects
-              </p>
-            </div>
-          </div>
-          <div className="hidden-ani-from-left w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
-            <div className="bg-chinese-orange xl:w-[70px] shrink-0 xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full">
+            <div className="bg-maize xl:w-[70px] shrink-0 xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full">
               <HandRaisedIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
             </div>
             <div className="flex flex-col justify-center gap-[8px]">
@@ -166,7 +155,21 @@ export default function Home() {
                 HTML, CSS, Javascript, Typescript, SCSS, Responsive Web, Web
                 Performance, Accessibility, SEO, Google Analytics, Webpack,
                 I18n, Git, Design, Docker, Google Could, AWS, Writing unit test,
-                Drawing chart SVG, D3js...
+                Drawing chart SVG, D3js, Setup project...
+              </p>
+            </div>
+          </div>
+
+          <div className="hidden-ani-from-left w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
+            <div className="bg-chinese-orange xl:w-[70px] xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full shrink-0">
+              <UserIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
+            </div>
+            <div className="flex flex-col justify-center gap-[8px]">
+              <p className="lg:text-[23px] xl:text-[25px] text-[20px] font-bold">
+                Responsibities
+              </p>
+              <p className="xl:text-base lg:text-[15px] text-[14px] text-yankees-blue/80">
+                80% coding, 20% management
               </p>
             </div>
           </div>
