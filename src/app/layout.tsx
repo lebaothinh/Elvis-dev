@@ -24,7 +24,7 @@ export default function RootLayout({
         />
         <link
           rel="icon"
-          href="/logo.svg"
+          href={(process.env.NEXT_PUBLIC_ROOT_PATH ?? "") + "/logo.svg"}
         />
       </head>
       <body className="bg-meat-brown">
