@@ -13,7 +13,7 @@ import { COMPANIES, getYearsOfWorkingBySkill } from "./constant/common";
 export default function Home() {
   return (
     <>
-      <div className="pt-[30px] lg:pt-[45px] flex flex-col justify-between h-[calc(100vh_-_115px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-me bg-no-repeat bg-[center_bottom] bg-contain">
+      <div className="pt-[30px] lg:pt-[45px] flex flex-col justify-between h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-me bg-no-repeat bg-[center_bottom] bg-contain">
         <div className="flex justify-between gap-[15px] lg:items-center flex-col lg:flex-row lg:h-[120px]">
           <h1
             className="lg:text-6xl text-5xl leading-[1.1] font-bold text-yankees-blue"
@@ -116,9 +116,9 @@ export default function Home() {
 
       <div
         id="work-section"
-        className="lg:snap-start bg-white px-[20px] lg:px-[50px] lg:h-screen xl:p-[100px] flex flex-col lg:flex-row lg:gap-[50px] xl:gap-[60px] items-center"
+        className="bg-white px-[20px] lg:px-[50px] lg:h-screen xl:p-[100px] flex flex-col lg:flex-row lg:gap-[50px] xl:gap-[60px] items-center overflow-x-hidden"
       >
-        <div className="snap-start lg:snap-align-none lg:flex-[1] flex flex-col gap-[30px] lg:gap-[20px] xl:gap-[13px] flex-[100vh] justify-center ">
+        <div className="lg:flex-[1] flex flex-col gap-[30px] lg:gap-[20px] xl:gap-[13px] flex-[100vh] justify-center">
           <div className="hidden-ani-from-left w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
             <div className="bg-myrtle-green xl:w-[70px] xl:h-[70px] lg:w-[60px] lg:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full shrink-0">
               <CodeBracketIcon className="text-white xl:w-[25px] xl:h-[25px] lg:h-[23px] lg:w-[23px] w-[20px] h-[20px]" />
