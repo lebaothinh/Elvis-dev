@@ -116,7 +116,7 @@ export default function Home() {
 
       <div
         id="work-section"
-        className="bg-white px-[20px] lg:px-[50px] lg:h-screen xl:p-[100px] flex flex-col lg:flex-row lg:gap-[50px] xl:gap-[60px] items-center overflow-x-hidden"
+        className="bg-white px-[20px] lg:px-[50px] lg:h-screen xl:p-[100px] flex flex-col lg:flex-row lg:gap-[50px] xl:gap-[60px] items-center overflow-hidden"
       >
         <div className="lg:flex-[1] flex flex-col gap-[30px] lg:gap-[20px] xl:gap-[13px] flex-[100vh] justify-center">
           <div className="hidden-ani-from-left w-full border border-yankees-blue/5 shadow-[rgba(0,_0,_0,_0.04)_0px_3px_5px] hover:shadow-[rgba(149,_157,_165,_0.2)_0px_8px_24px] p-[20px] lg:p-[20px_30px] xl:p-[26px_40px] bg-white rounded-lg flex gap-[35px] items-center">
