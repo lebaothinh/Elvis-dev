@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Typed from "typed.js";
+import { getYearsOfWorkingBySkill } from "../constant/common";
 
 export default function Animation() {
   useEffect(() => {
@@ -61,7 +62,16 @@ export default function Animation() {
         showCursor: false,
       });
       typed31 = new Typed("#intro-3-1", {
-        strings: ["05"],
+        strings: [
+          getYearsOfWorkingBySkill(
+            "ReactJs",
+            "NextJs",
+            "VueJs",
+            "NuxtJs",
+            "Angular4",
+            "Angular8"
+          ).toFixed(1).toString().padStart(2, '0')
+        ],
         startDelay: 1800,
         typeSpeed: 50,
         showCursor: false,

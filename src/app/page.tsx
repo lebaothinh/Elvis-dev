@@ -1,6 +1,5 @@
 import {
   CodeBracketIcon,
-  ComputerDesktopIcon,
   HandRaisedIcon,
   UserIcon,
 } from "@heroicons/react/24/solid";
@@ -13,7 +12,7 @@ import { COMPANIES, getYearsOfWorkingBySkill } from "./constant/common";
 export default function Home() {
   return (
     <>
-      <div className="pt-[30px] lg:pt-[45px] flex flex-col justify-between h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-me bg-no-repeat bg-[center_bottom] bg-contain">
+      <div className="pt-[30px] lg:pt-[45px] flex flex-col justify-between min-h-[calc(100dvh_-_60px)] max-h-[calc(100dvh_-_60px)] h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_123px)] px-[20px] lg:px-[50px] xl:px-[77px] bg-me bg-no-repeat bg-[center_bottom] bg-contain">
         <div className="flex justify-between gap-[15px] lg:items-center flex-col lg:flex-row lg:h-[120px]">
           <h1
             className="lg:text-6xl text-5xl leading-[1.1] font-bold text-yankees-blue"
@@ -154,8 +153,9 @@ export default function Home() {
               <p className="text-[14px] xl:text-base lg:text-[15px]  text-yankees-blue/80">
                 HTML, CSS, Javascript, Typescript, SCSS, Responsive Web, Web
                 Performance, Accessibility, SEO, Google Analytics, Webpack,
-                I18n, Git, Design, Docker, Google Could, AWS, Writing unit test,
-                Drawing chart SVG, D3js, Setup project...
+                I18n, Git, Design, Docker, Google Could, AWS, Storybook, Editor,
+                KYC (Verisoul), Google map api, Writing unit test, Drawing chart
+                SVG, D3js, Setup project...
               </p>
             </div>
           </div>

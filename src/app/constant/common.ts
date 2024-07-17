@@ -30,6 +30,12 @@ export type Skill =
   | "Angular4"
   | "Canjs"
   | "UWP"
+  | "Storybook"
+  | "Quill Editor"
+  | "Slate Editor"
+  | "KYC (Verisoul)"
+  | "Google map api"
+  | "Firebase"
   | "Setup project";
 
 export type Project = {
@@ -291,7 +297,7 @@ export const COMPANIES: Company[] = [
         from: new Date("2023/03/01"),
         to: new Date(),
         description: `Finding apartment for Japanese in VietNam. This application provides an easy-to-use platform for searching, comparing, and selecting apartments that match individual needs`,
-        skills: ["NextJs", "Accessibility", "AWS", "Setup project"],
+        skills: ["NextJs", "Accessibility", "I18n", "AWS", "Setup project"],
         color: "#FFC107",
         private: true,
         present: true,
@@ -308,7 +314,6 @@ export const COMPANIES: Company[] = [
         bgImageAlt: "",
         from: new Date("2023/05/01"),
         to: new Date(),
-        present: true,
         description: `Display business indexes in a visual manner. Predict sales, analyze revenue, and provide suitable marketing strategies. Automate management operations.`,
         skills: ["NextJs", "SVG", "D3js", "Docker", "AWS", "Setup project"],
         color: "#46BDF8",
@@ -318,6 +323,105 @@ export const COMPANIES: Company[] = [
           be: 2,
         },
         responsibities: `Web front-end tech lead. Build and implement UI elements`,
+      },
+      {
+        id: "FPNET",
+        name: "FPNET",
+        bgImageUrl: "fpnet.png",
+        bgImageAlt: "fpnet",
+        from: new Date("2023/12/08"),
+        to: new Date(),
+        present: true,
+        description: `A platform for buying and selling books and documents, which includes a forum for discussing topics related to books.`,
+        skills: ["NextJs", "Storybook", "Setup project"],
+        color: "#7D0012",
+        private: true,
+        team: {
+          fe: 2,
+          be: 2,
+        },
+        responsibities: `Web front-end tech lead. Build and implement UI elements`,
+      },
+      {
+        id: "MSOX",
+        name: "MSOX",
+        bgImageUrl: "msox.png",
+        bgImageAlt: "msox",
+        from: new Date("2024/04/01"),
+        to: new Date(),
+        present: true,
+        description: `A web application for managing construction workers: CRUD operations for worker information, importing and exporting CSV data, and scheduling shifts.`,
+        skills: ["NextJs", "Google map api", "Setup project"],
+        color: "#2C6F57",
+        private: true,
+        team: {
+          fe: 2,
+          be: 2,
+        },
+        responsibities: `Web front-end tech lead. Build and implement UI elements`,
+      },
+    ],
+  },
+  {
+    name: "Fluxion",
+    imageUrl:
+      "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F07b236f1-2027-477e-a946-62b5ca139bc2%2F35fd4d31-9a49-4f32-b338-c63eef30e0ed%2FGroup_7.png?id=bb1a35da-e5b0-42ad-a0a0-7adbaf29c7e9&table=collection&spaceId=07b236f1-2027-477e-a946-62b5ca139bc2&width=40&userId=c08d8355-b724-460f-8d7f-9ea757bc7f25&cache=v2",
+    imageAlt: "fluxion",
+    color: "#4856A6",
+    url: "",
+    projects: [
+      {
+        id: "rep",
+        name: "Rep",
+        bgImageUrl: "https://rep.run/_next/static/media/pc_sp.6c08bbf7.png",
+        bgImageAlt: "rep",
+        from: new Date("2023/11/01"),
+        to: new Date(),
+        present: true,
+        description: `A trusted on-chain gamified social network`,
+        skills: [
+          "NextJs",
+          "KYC (Verisoul)",
+          "Google map api",
+          "Quill Editor",
+          "Slate Editor",
+          "Firebase",
+        ],
+        color: "#462e67",
+        link: "https://rep.run",
+        team: {
+          fe: 1,
+          be: 3,
+          sqa: 2,
+        },
+        responsibities: `Web front-end developer. Build and implement UI elements`,
+      },
+      {
+        id: "offerit",
+        name: "Offerit",
+        bgImageUrl:
+          "https://dev.offerit.org/_next/static/media/house-pc.dd294740.png",
+        bgImageAlt: "offerit",
+        from: new Date("2023/11/01"),
+        to: new Date(),
+        present: true,
+        description: `A trusted on-chain real estate social network`,
+        skills: [
+          "NextJs",
+          "Google map api",
+          "Quill Editor",
+          "KYC (Verisoul)",
+          "Firebase",
+          "Slate Editor",
+        ],
+        color: "#47C1CA",
+        link: "https://dev.offerit.org",
+        team: {
+          fe: 1,
+          be: 3,
+          sqa: 2,
+        },
+        responsibities: `Web front-end developer. Build and implement UI elements`,
       },
     ],
   },
@@ -337,7 +441,7 @@ export const getYearsOfWorkingBySkill = (...skill: Skill[]) => {
   let presentMaxTimeProject = null;
 
   projects.forEach((p) => {
-    if (p.skills.some(s => skill.includes(s))) {
+    if (p.skills.some((s) => skill.includes(s))) {
       if (p.present) {
         // console.log(p)
         const range = getHourRange(p.from, p.to);
@@ -352,12 +456,12 @@ export const getYearsOfWorkingBySkill = (...skill: Skill[]) => {
   });
 
   if (presentMaxTimeProject) {
-    projectsBySkill.push(presentMaxTimeProject)
+    projectsBySkill.push(presentMaxTimeProject);
   }
 
   const hourOfWorking = projectsBySkill.reduce((pre, cur) => {
     return getHourRange(cur?.from as Date, cur?.to as Date) + pre;
   }, 0);
 
-  return (hourOfWorking / 24 / 365)
+  return hourOfWorking / 24 / 365;
 };
