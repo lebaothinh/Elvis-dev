@@ -235,7 +235,7 @@ export default function Home() {
                 imageAlt={company.imageAlt}
                 color={company.color}
                 url={company.url}
-                present={index === 0}
+                present={company.projects.some(p => p.present)}
               />
               <div className="flex flex-wrap gap-[15px] lg:gap-[20px] xl:gap-[40px] mb-[40px]">
                 {company.projects.reverse().map((project) => (

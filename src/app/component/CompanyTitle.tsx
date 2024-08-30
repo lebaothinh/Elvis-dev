@@ -19,8 +19,9 @@ export const CompanyTitle: FC<CompanyTitleProps> = ({
   present,
   className
 }) => {
+  const RenderElement = url ? "a" : "p"
   return (
-    <a href={url} target="_blank" className={className}>
+    <RenderElement href={url} target="_blank" className={className}>
       <div className="inline-flex gap-[10px] items-center mb-[20px]" title={present ? "I'm working here" : "I'm not working here anymore"}>
         <img
           style={{ borderColor: color }}
@@ -34,6 +35,6 @@ export const CompanyTitle: FC<CompanyTitleProps> = ({
         </h3>
         {present && <div className="w-[10px] h-[10px] rounded-full bg-green-500"></div>}
       </div>
-    </a>
+    </RenderElement>
   );
 };
