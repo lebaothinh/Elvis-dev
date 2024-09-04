@@ -364,7 +364,7 @@ export const COMPANIES: Company[] = [
   },
   {
     name: "Fluxion (side project)",
-    imageUrl: "/fluxion.png",
+    imageUrl: "fluxion.png",
     imageAlt: "fluxion",
     color: "#4856A6",
     url: "",
